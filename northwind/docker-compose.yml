@@ -1,0 +1,30 @@
+version: '3'
+
+networks: 
+    appnet:
+
+volumes: 
+    appvol:
+
+services: 
+    nwdb:
+        image: chukmunnlee/nwdb:latest
+        build: 
+            context: ./database
+        environment: 
+        - MYSQL_ROOT_PASSWORD=changeit
+        networks: 
+        - appnet
+        volumes: 
+        - appvol:/var/lib/mysql
+    
+    nwapp:
+        image: chukmunnlee/nwapp:latest
+        build:
+            context: ./server
+        environment: 
+        - DB_HOST=nwdb
+        ports:
+        - 80:3000
+        networks: 
+        - appnet
