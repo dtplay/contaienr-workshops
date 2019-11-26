@@ -1,0 +1,9 @@
+{
+	"db_host": "localhost",
+	"db_port": 3306,
+	"db_user": "root",
+	"db_password": "changeit",
+	"app_port": 3000,
+	"app_retries": 3,
+	"app_retry_interval": 30
+}

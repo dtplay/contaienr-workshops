@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Search</title>
+		<link rel="stylesheet" href="/bootstrap.min.4.3.1.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<h1>Search Boardgames</h1>
+
+			<form method="GET" action="/search" class="form-inline">
+				<div class="form-group mr-2">
+					<label for="q" class="sr-only">Search Term</label>
+					<input id="q" type="text" name="q" class="form-control" placeholder="Enter boardgame name">
+				</div>
+				<button type="submit" class="btn btn-warning mr-2">Search</button>
+			</form>
+		</div>
+		
+	</body>
+</html>

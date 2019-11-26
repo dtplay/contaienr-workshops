@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+   name: nwdb-deploy
+   labels:
+      app: nwdb
+
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: nwdb
+   minReadySeconds: 30
+   template:
+      metadata:
+         name: nwdb-pod
+         labels:
+            app: nwdb
+      spec:
+         containers:
+         - name: nwdb
+           image: stackupiss/northwind-db:v1
+           imagePullPolicy: IfNotPresent
+           ports:
+           - containerPort: 3306
+
+---
+
+apiVersion: v1
+kind: Service
+
+metadata:
+   name: nwdb-svc
+
+spec:
+   selector:
+      app: nwdb
+   type: ClusterIP
+   ports:
+   - port: 3306
+     targetPort: 3306

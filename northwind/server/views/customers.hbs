@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Customer</title>
+	</head>
+	<body>
+		<h2>Customers</h2>
+		<h3><code>IP: {{ ip_address }}</code></h3>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Company</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each customer}}
+					<tr>
+						<td>{{ this.id }}</td>
+						<td>
+							<a href="api/customer/{{ this.id }}">
+								{{ this.company }}
+							</a>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,51 @@
+  <form fxLayout="column" fxLayoutGap="8px">
+    <mat-form-field>
+      <input type="number" name="id" matInput placeholder="Id" [(ngModel)]="customer.id" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="last_name" matInput placeholder="Last Name" [(ngModel)]="customer.last_name" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="first_name" matInput placeholder="First Name" [(ngModel)]="customer.first_name" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="tel" name="business_phone" matInput placeholder="Phone (O)" [(ngModel)]="customer.business_phone" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="tel" name="mobile_phone" matInput placeholder="Phone (M)" [(ngModel)]="customer.mobile_phone" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="company" matInput placeholder="Company" [(ngModel)]="customer.company" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="address" matInput placeholder="Address" [(ngModel)]="customer.address" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="city" matInput placeholder="city" [(ngModel)]="customer.city" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="state_province" matInput placeholder="State" [(ngModel)]="customer.state_province" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="country_region" matInput placeholder="Country" [(ngModel)]="customer.country_region" readonly>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text" name="zip_postal_code" matInput placeholder="Postal Code" [(ngModel)]="customer.zip_postal_code" readonly>
+    </mat-form-field>
+
+    <button type="button" mat-button mat-raised-button color="accent" (click)="back()">
+      <mat-icon>keyboard_backspace</mat-icon>
+      Back
+    </button>
+
+  </form>

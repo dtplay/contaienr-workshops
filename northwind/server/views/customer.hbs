@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Customer Details</title>
+	</head>
+	<body>
+		<h2>Customer: {{ customer.id }}</h2>
+		<table border="1">
+			<tr>
+				<td>Id</td>
+				<td>{{ customer.id }}</td>
+			</tr>
+			<tr>
+				<td>Company</td>
+				<td>{{ customer.company }}</td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td>{{ customer.last_name }}</td>
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td>{{ customer.first_name }}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{ customer.email }}</td>
+			</tr>
+			<tr>
+				<td>Job Title</td>
+				<td>{{ customer.job_title }}</td>
+			</tr>
+			<tr>
+				<td>Phone (O)</td>
+				<td>{{ customer.business_phone }}</td>
+			</tr>
+			<tr>
+				<td>Phone (M)</td>
+				<td>{{ customer.mobile_phone }}</td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td>{{ customer.address }}</td>
+			</tr>
+			<tr>
+				<td>City</td>
+				<td>{{ customer.city }}</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Search of '{{ searchTerm }}'</title>
+	</head>
+	<body>
+
+		<h1>Games with '{{ searchTerm }}' in its Name</h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each games}}
+					<tr>
+						<td>
+							<a href="/game/{{this.gid}}">{{this.name}}</a>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		
+	</body>
+</html>

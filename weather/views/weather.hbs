@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather: {{ forecast.city }}</title>
+</head>
+<body>
+
+	<h2>Weather for {{ forecast.city }}</h2>
+
+	{{#each forecast.conditions}}
+		<div>
+			<img src="http://openweathermap.org/img/w/{{ this.icon }}.png" alt="">
+			{{ this.main }} {{ this.description }}
+		</div>
+	{{/each}}
+	
+</body>
+</html>

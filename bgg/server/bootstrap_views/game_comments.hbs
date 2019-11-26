@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Comments for {{ game.name }}</title>
+		<link rel="stylesheet" href="/bootstrap.min.4.3.1.css">
+	</head>
+	<body>
+
+		<div class="container">
+
+			<h2>Game Details</h2>
+
+			<div class="media">
+
+				<img class="align-self-start mr-3" src="{{ game.image }}" alt="">
+
+				<div class="media-body">
+					<h3 class="media-heading">{{ game.name }}</h3>
+					<div>
+						Game id: <b><code>{{ game.gid }}</code></b>
+					</div>
+					<div>
+						Release year: {{ game.year }}
+					</div>
+					<div>
+						Ranking: {{ game.ranking }}
+					</div>
+					<div>
+						Users rated: {{ game.users_rated }}
+					</div>
+					<div>
+						<a href="{{ game.url }}" target="_blank">View in BGG</a>
+					</div>
+				</div>
+			</div>
+
+			<h2>Comments</h2>
+
+			<em>List {{ limit }} of {{ total_comments }}</em>
+
+			{{#each comments}}
+				<div class="media">
+					<div class="media-body">
+						<h5 style="display: flex; justify-content: space-between;">
+							<b>{{ this.user }}</b> 
+							<em>Rating: {{ this.rating }}</em>
+						</h5>
+						<p class="pl-3" style="border-left: grey 8px solid; border-bottom: grey 1px solid;">
+							{{ this.c_text }}
+						</p>
+					</div>
+				</div>
+			{{/each}}
+		
+	</body>
+</html>

@@ -1,0 +1,6 @@
+<h3>Page: {{ (this.offset / this.limit) + 1 }}</h3>
+<mat-list (swipeleft)="prevPage()" (swiperight)="nextPage()">
+  <mat-list-item *ngFor="let c of customers" (click)="navigateTo(c.id)">
+    {{ c.company | uppercase }}
+  </mat-list-item>
+</mat-list>

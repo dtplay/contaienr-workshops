@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nguniversal/express-engine": "^7.1.0",
+    "@nguniversal/module-map-ngfactory-loader": "^7.1.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "reflect-metadata": "^0.1.13"
+  }
+}

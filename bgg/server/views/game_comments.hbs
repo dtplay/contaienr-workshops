@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Comments for {{ game.name }}</title>
+	</head>
+	<body>
+
+		<h2>Game Details</h2>
+
+		<table>
+			<tr>
+				<td>
+					<img src="{{ game.image }}" alt="">
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>Game id:</td>
+							<td>{{ game.gid}}</td>
+						</tr>
+						<tr>
+							<td>Name:</td>
+							<td>{{ game.name }}</td>
+						</tr>
+						<tr>
+							<td>Released:</td>
+							<td>{{ game.year }}</td>
+						</tr>
+						<tr>
+							<td>Ranking:</td>
+							<td>{{ game.ranking }}</td>
+						</tr>
+						<tr>
+							<td>Users rated:</td>
+							<td>{{ game.users_rated }}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<a href="{{ game.url }}" target="_blank">View in BGG</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<h2>Comments</h2>
+
+		<em>List {{ limit }} of {{ total_comments }}</em>
+		<table border="1">
+			{{#each comments}}
+				<tr>
+					<td>
+						<div> 
+							User: <b>{{ this.user }}</b>,
+							Rating: <em>{{ this.rating }}</em> 
+						</div>
+						<p>
+							<code>{{ this.c_text }}</code>
+						</p>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+		
+	</body>
+</html>
